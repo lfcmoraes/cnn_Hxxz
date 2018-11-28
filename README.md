@@ -1,5 +1,5 @@
 # Using Convolutional Neural Network to solve quantum-spin-chains Ground-States.
-The project idea is to classify the magnetization zone of the ground state of an quantum spin chain hamiltonian
+The project main idea is to find the the ground state of a quantum spin chain hamiltonian
 
 ---
 
