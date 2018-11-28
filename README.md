@@ -7,11 +7,11 @@ The project main idea is to find the the ground state of a quantum spin chain ha
 
 ---
 
-![gs-energy_big](https://user-images.githubusercontent.com/31672811/49121234-e5401b00-f296-11e8-8dce-ceb59a1170f4.png)
+![gs-energy_big](https://github.com/lfcmoraes/cnn_Hxxz/blob/master/images/GS-Energy_big.png)
 
-![gs-mag_big](https://user-images.githubusercontent.com/31672811/49121257-f1c47380-f296-11e8-9787-2b0080cac6b3.png)
+![gs-mag_big](https://github.com/lfcmoraes/cnn_Hxxz/blob/master/images/GS-Mag_big.png)
 
 ---
 
-![loss](https://user-images.githubusercontent.com/31672811/49121258-f1c47380-f296-11e8-94be-c2af5251f09c.png)
-![predct](https://user-images.githubusercontent.com/31672811/49121259-f25d0a00-f296-11e8-849f-2a47eac4b176.png)
+![loss](https://github.com/lfcmoraes/cnn_Hxxz/blob/master/images/loss.png)
+![predct](https://github.com/lfcmoraes/cnn_Hxxz/blob/master/images/predct.png)
