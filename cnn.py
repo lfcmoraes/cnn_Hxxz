@@ -63,11 +63,12 @@ def plot_history(history):
 def chart_regression(pred,y,sort=True):
     t = pd.DataFrame({'pred' : pred, 'y' : y.flatten()})
     if sort:
-	t.sort_values(by=['y'],inplace=True)
+        t.sort_values(by=['y'],inplace=True)
     a = plt.plot(t['y'].tolist(),label='expected')
     b = plt.plot(t['pred'].tolist(),label='prediction')
     plt.ylabel('output')
     plt.legend()
+    plt.title('RMSE ='+ str(np.round(100000*score)/100000))
     plt.savefig('predct.png')
 
 dataset = pd.read_csv('data_set.csv')
