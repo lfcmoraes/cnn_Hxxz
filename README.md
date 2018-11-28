@@ -12,6 +12,14 @@ The project main idea is to find the the ground state of a quantum spin chain ha
 ![gs-mag_big](https://github.com/lfcmoraes/cnn_Hxxz/blob/master/images/GS-Mag_big.png)
 
 ---
+### Code
+| Used to | # of samples | % |
+| --- | --- | --- |
+| Train | 9120 | 76 |
+| Validate| 2280 | 19 |
+| Test | 600 | 5 |
+
+---
 ## Results
 ![loss](https://github.com/lfcmoraes/cnn_Hxxz/blob/master/images/loss.png)
 ![predct](https://github.com/lfcmoraes/cnn_Hxxz/blob/master/images/predct.png)
