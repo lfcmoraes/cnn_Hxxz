@@ -8,6 +8,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.layers.normalization import BatchNormalization
 from keras.layers.convolutional import *
 from keras.callbacks import ModelCheckpoint
+from sklearn import metrics
 
 import keras
 import numpy as np
@@ -17,10 +18,8 @@ import shutil
 import os
 import cv2
 
-# plotting on a server
 plt.switch_backend('agg')
 
-# plot loss and accuracy function 
 def plot_history(history):
     loss_list = [s for s in history.history.keys() if 'loss' in s and 'val' not in s]
     val_loss_list = [s for s in history.history.keys() if 'loss' in s and 'val' in s]
@@ -60,7 +59,7 @@ def plot_history(history):
     plt.legend()
     plt.savefig('mse.png')
 
-#@jeffheaton plot function
+
 def chart_regression(pred,y,sort=True):
     t = pd.DataFrame({'pred' : pred, 'y' : y.flatten()})
     if sort:
@@ -71,7 +70,6 @@ def chart_regression(pred,y,sort=True):
     plt.legend()
     plt.savefig('predct.png')
 
-#reading csv
 dataset = pd.read_csv('data_set.csv')
 
 
@@ -79,27 +77,24 @@ dataset = pd.read_csv('data_set.csv')
 X_1 = dataset.iloc[:,1].values
 Y_1 = dataset.iloc[:,3].values
 
-#randonly permutate data
 W = np.random.permutation(np.c_[X_1.reshape(len(X_1), -1), Y_1.reshape(len(Y_1), -1)])
 
 X = W[:, :X_1.size//len(X_1)].reshape(X_1.shape)
 Y = W[:, X_1.size//len(X_1):].reshape(Y_1.shape)
 
-#training and test division
 x_train = np.array([X[i] for i in range((len(X)//20),len(X))])
 y_train = np.array([Y[i] for i in range((len(Y)//20),len(Y))])
 
 x_test = np.array([X[i] for i in range((len(X)//20))])
 y_test = np.array([Y[i] for i in range((len(Y)//20))])
 
-#saving test data to a csv file 
+
 df1 = pd.DataFrame(x_test)
 df2 = pd.DataFrame(y_test)
 
 df1.to_csv("x_test.csv")
 df2.to_csv("y_test.csv")
 
-#creating a matrix with all the training data
 train_data = []
 
 load_train_data = []
@@ -117,7 +112,7 @@ for file in y_train:
     train_label.append(file)
 train_label = np.array(train_label)
 
-#creating a matrix with all the test data
+
 test_data = []
 
 load_test_data = []
@@ -135,7 +130,6 @@ for file in y_test:
     test_label.append(file)
 test_label = np.array(test_label)
 
-#construction the model
 model = Sequential()
 model.add(Conv2D(64,(3,3), activation='relu', input_shape=(256,256,1)))
 model.add(Conv2D(64,(3,3),activation='relu'))
@@ -183,3 +177,8 @@ score = np.sqrt(metrics.mean_squared_error(pred,test_label))
 print("Score (RMSE): {}".format(score))
 
 chart_regression(pred.flatten(),test_label)
+
+
+
+
+
