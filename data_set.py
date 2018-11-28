@@ -98,7 +98,9 @@ def POWER_METHOD(A,dim):
     C[1] += 2*l
     return (C)
 
-
+#creating matrix directory
+if not os.path.exists(matrix):
+     os.mkdir(matrix)
 
 # number of spins
 l = 8
