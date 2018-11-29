@@ -8,7 +8,9 @@ I've chosen an XXZ Hamiltonian with an uniform external magnect field. The Hamil
 ---
 ## Data set
 
-The number of spins of the chain was fixed, ![L=8](https://latex.codecogs.com/gif.latex?L%20%3D%208), and de anisotropy constant, ![\Delta](https://latex.codecogs.com/gif.latex?%5CDelta%20%3D%20-1), was set to garantee the paramagnect regime. The ground state engergy density (![E/L](https://latex.codecogs.com/gif.latex?E_%7BGS%7D/L))  and the magnetization of the data set in function of the external magnect field (![h](https://latex.codecogs.com/gif.latex?h)) are represente in the graphics bellow respectivaly: 
+The number of spins of the chain was fixed, ![L=8](https://latex.codecogs.com/gif.latex?L%20%3D%208), and de anisotropy constant, ![\Delta](https://latex.codecogs.com/gif.latex?%5CDelta%20%3D%20-1), was set to garantee the paramagnect regime. To generete the Hamiltonians the magnect fiel was started at ![-6](https://latex.codecogs.com/gif.latex?-6), the matrix is block diagonalized and the minimum of all of the block are stored (![sigmaz](https://latex.codecogs.com/gif.latex?%5Csigma%5Ez) commutes with the Hamiltonian so the last can be written in magnatizations zones). After that the magnect field is incread by ![0.001](https://latex.codecogs.com/gif.latex?0.001) 
+
+The ground state engergy density (![E/L](https://latex.codecogs.com/gif.latex?E_%7BGS%7D/L))  and the magnetization of the data set in function of the external magnect field (![h](https://latex.codecogs.com/gif.latex?h)) are represente in the graphics bellow respectivaly: 
 
 ![gs-energy_big](https://github.com/lfcmoraes/cnn_Hxxz/blob/master/images/GS-Energy_big.png)
 
