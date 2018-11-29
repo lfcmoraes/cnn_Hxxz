@@ -1,5 +1,7 @@
 # Using Convolutional Neural Network to solve quantum-spin-chains Ground-States.
-The project main idea is to find the the ground state of a quantum spin chain hamiltonian
+The project main idea is to find the the ground state of a quantum spin chain hamiltonian using deep learning. Deep learning is wildily used  as a tool to find abstract information in a lot of kind of problems, image pattern recognition are one of them. 
+
+I've chosen an XXZ Hamiltonian with an uniform external magnect field. The Hamiltonian is in the for:  
 
 ---
 
@@ -18,6 +20,7 @@ The project main idea is to find the the ground state of a quantum spin chain ha
 | Train | 9120 | 76 |
 | Validate| 2280 | 19 |
 | Test | 600 | 5 |
+| Total | 12000 | 100 | 
 
 ---
 ## Results
